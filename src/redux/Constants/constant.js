@@ -1,0 +1,4 @@
+export let constant = {
+  USER_LOGIN: 'USER_LOGIN',
+  GET_POPULAR_MOVIES_PENDING: 'GET_POPULAR_MOVIES',
+};

@@ -1,0 +1,41 @@
+ npm install @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/native-stack  redux  react-redux  redux-thunk  @types/react-redux  @react-native-async-storage/async-storage npm i redux-persist  react-native-vector-icons @types/react-native-vector-icons @react-navigation/bottom-tabs  @react-navigation/drawer react-native-gesture-handler react-native-reanimated  react-native-restart  react-native-localization @react-native-community/netinfo
+ /////////////////////////////////////////////////////////////////////////
+
+
+android/app/src/main/java/<your package name>/MainActivity.java.
+Add the following code to the body of MainActivity class:
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(null);
+}
+
+and make sure to add an import statement at the top of this file:
+
+import android.os.Bundle;
+
+
+///////////////////////////////////////////////////////////////////////////
+
+Edit android/app/build.gradle ( NOT android/build.gradle ) and add the following:
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+////////////////////////////////////////////////////////////////////////////////
+
+To finalize installation of react-native-gesture-handler, add the following at the top (make sure it's at the top and there's nothing else before it) of your entry file, such as index.js or App.js:
+
+import 'react-native-gesture-handler';
+
+
+
+Add Reanimated's babel plugin to your babel.config.js:
+
+  module.exports = {
+      ...
+      plugins: [
+          'react-native-reanimated/plugin',
+      ],
+  };
+
+
